@@ -25,7 +25,10 @@ jobs:
       - run: pnpm install --frozen-lockfile
       - run: pnpm content:sync
       - run: pnpm exec astro check
-      - run: pnpm check:manifest
+      # Theme authoring docs refer to upstream sample posts, removed from this blog.
+      # Keep component and font manifest validation; content is checked by Astro.
+      - run: node scripts/check-manifest.mjs
+      - run: node scripts/check-font-schema.mjs
       - run: pnpm type-check
       - run: pnpm build
       - uses: actions/upload-pages-artifact@v3
