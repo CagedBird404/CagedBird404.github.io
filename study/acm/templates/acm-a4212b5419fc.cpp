@@ -1,0 +1,86 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+    // string a="awa",b="bwb";
+    // swap(a,b);//置换
+    vector<int> au={1,9,1,3,6,0,4};
+    sort(au.begin(),au.end());//将数组中数字排序，从小到大
+    sort(au.begin(),au.end(),greater<int>());//从大到小
+    vector<pair<int,int>> be={{2,4},{5,3},{8,4},{9,1},{8,5},{2,10},{2,4}};
+    sort(be.begin(),be.end(),[](pair<int,int>a,pair<int,int>b){if(a.first!=b.first)return a.first>b.first;
+        return a.second>b.second;});//相当于后面省略了一个else，先判断条件，符合执行第一个，不符合执行后一个
+    for(auto&&i:be)
+    {
+        cout<<i.first<<" "<<i.second<<endl;
+    }
+
+
+    //lower_bound()寻找大于等于X的第一个元素位置,是位置不是数字
+    //upper_bound()寻找大于X的第一个元素位置
+    vector<int> A{2,5,9,3,0,2,9,4,2,6,7,8};
+    int B=lower_bound(A.begin(),A.end(),8)-A.begin();//将迭代器转为数字
+    cout<<B<<endl;//如果想从某个位置开始，就在begain后加减，end同理，如果找不到，则返回尾迭代器
+    
+    reverse(A.begin(),A.end());//反转数组中的数
+
+
+    cout<<max(1,2)<<endl;//前后必须同一类型，板子数字是longlong注意，如果是
+    cout<<min(3,2)<<endl;//数字可以在数字后加ll，例如0ll
+    cout<<max({1,2,3,4,5,6,7})<<endl;//多个数用({})
+    *max_element(A.begin(), A.end());   //适用于容器的
+
+
+    string line;
+    while(getline(cin,line,';'))//轮流输入给line，';'结束，可以作为判断条件，如果没有;默认遇到换行符号结束
+    {
+        cout<< line <<endl;
+    }
+
+
+    //unique,消除重复相邻元素，数组长度不变，但是消除的变为无效数据
+    sort(A.begin(),A.end());
+    //比如排序后为 1 1 2 3 3 5 5 
+    //之后就会变为 1 2 3 5 * * *
+    //unique(A.begin(),A.end());返回的是第一个*的迭代器
+    //如果想只要实际数据长度，则组合使用erase
+    A.erase(unique(A.begin(),A.end()),A.end());
+    for(auto&&i:A)
+    {
+        cout<<i<<endl;
+    }
+
+while(next_permutation(all(a))){}//会将容器内的元素调整为下一个字典序更大的排列，
+                                 //同时也能作为判断标准，没有就返回0，否则为1
+                                 //1 2 3 ->  1 3 2  ->  2 1 3  ->  2 3 1  ->  3 1 2等等
+    
+
+    //统计容器中有多少为x的元素   count
+    int u=1;
+    int g=count(A.begin(),A.end(),u);  //只可以统计单个元素数量，比如MHY就不可以
+    cout<< g <<endl;
+    //统计符合条件元素的数量      count_if
+    int k=count_if(A.begin(),A.end(),[](int x){return x%2==0;});
+    cout<< k <<endl;
+
+
+    //gcd()最大公因数/lcm()最小公倍数
+    int d=gcd(12,40);
+    cout<<d<<endl;
+    int e=lcm(101,200);
+    cout<<e<<endl;
+}
+    //如果没有则需前置函数
+    int gcd(int a,int b)
+    {
+        if(!b)
+           return a;
+        return gcd(b,a%b);//返给函数b和a除以b的余数
+    }
+    int lcm(int a,int b)
+    {
+        return a/gcd(a,b)*b;
+    }
+    //3. 关键逻辑：欧几里得算法的原理
+//欧几里得算法的核心定理是：对于任意两个正整数a、b（a > b），
+//有 gcd(a, b) = gcd(b, a mod b)（ a mod b  即  a%b ，表示a除以b的余数）。
+//通过不断用“较小数”和“余数”替换原参数，直到余数为0，此时的“较小数”就是最终的GCD。

@@ -1,0 +1,114 @@
+/*
+在l到r的范围内，选两个数字，相同的概率是多少，要化简到最小
+*/
+#include <bits/stdc++.h> 
+using namespace std;
+#define int long long                 
+#define endl '\n'                     
+#define all(x) (x).begin(), (x).end() 
+
+struct node{
+    int l,r,id;
+};
+
+void solve()
+{
+    int n,m;
+    cin >> n >> m;
+    vector<int> a(n+1);
+    for(int i = 1;i <= n;i++) cin >> a[i];
+
+    int len = sqrt(n);
+    int num = (n + len - 1) / len;
+
+    vector<int> b(n+1);
+    for(int i = 1;i <= n;i++)
+        b[i] = (i - 1) / len + 1;
+
+    vector<int> bl(num + 1),br(num + 1);
+    for(int i = 1;i <= num;i++)
+    {
+        bl[i] = (i - 1) * len + 1;
+        br[i] = min(n, i * len);
+    }
+
+    vector<node> k(m);
+    for(int i = 0;i < m;i++)
+    {
+        cin >> k[i].l >> k[i].r;
+        k[i].id = i;
+    }
+
+    sort(all(k),[&](node a,node c){
+        if(b[a.l] != b[c.l]) return b[a.l] < b[c.l];
+        return a.r < c.r;
+    });
+
+    vector<pair<int,int>> ans(m);
+
+    vector<int> mp(n + 1, 0); 
+    int l = 1, r = 0;         
+    int now = 0;
+
+    for(int i = 0; i < m; i++)
+    {
+        while(l < k[i].l)
+        {
+            now -= mp[a[l]] * (mp[a[l]] - 1) / 2;
+            mp[a[l]]--;
+            now += mp[a[l]] * (mp[a[l]] - 1) / 2;
+            l++;
+        }
+
+        while(l > k[i].l)
+        {
+            l--;
+            now -= mp[a[l]] * (mp[a[l]] - 1) / 2;
+            mp[a[l]]++;
+            now += mp[a[l]] * (mp[a[l]] - 1) / 2;
+        }
+
+        while(r < k[i].r)
+        {
+            r++;
+            now -= mp[a[r]] * (mp[a[r]] - 1) / 2;
+            mp[a[r]]++;
+            now += mp[a[r]] * (mp[a[r]] - 1) / 2;
+        }
+
+        while(r > k[i].r)
+        {
+            now -= mp[a[r]] * (mp[a[r]] - 1) / 2;
+            mp[a[r]]--;
+            now += mp[a[r]] * (mp[a[r]] - 1) / 2;
+            r--;
+        }
+
+        int len = k[i].r - k[i].l + 1;
+        int base = len * (len - 1) / 2;
+
+        ans[k[i].id] = {now, base};
+    }
+
+    for(int i = 0;i < m; i++)
+    {
+        if(ans[i].first == 0)
+        {
+            cout << "0/1" << endl;
+            continue;
+        }
+        int g = gcd(ans[i].first, ans[i].second);
+        cout << ans[i].first / g << "/" << ans[i].second / g << endl;
+    }
+}
+
+signed main()
+{
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+
+    int TT = 1;
+    cin >> TT;
+    while (TT--)
+        solve();
+}

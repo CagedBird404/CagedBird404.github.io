@@ -1,11 +1,14 @@
 ---
 title: "二维前缀和"
 published: 2026-11-16
-category: "学习笔记"
+category: ACM竞赛模板
 tags: [学习笔记, C++]
 description: "保留原意整理的学习笔记。"
 draft: false
 ---
+
+[返回分类目录](/posts/acm-index/) · [相关知识点](/posts/acm-keywords/)
+
 
 > 整理修正：修正了原笔记的矩形查询公式、示例坐标和差分函数中 v/k 不一致的问题。
 

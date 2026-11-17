@@ -1,11 +1,14 @@
 ---
 title: "折半搜索"
 published: 2026-11-16
-category: "学习笔记"
+category: ACM竞赛模板
 tags: [学习笔记, C++]
 description: "保留原意整理的学习笔记。"
 draft: false
 ---
+
+[返回分类目录](/posts/acm-index/) · [相关知识点](/posts/acm-keywords/)
+
 
 # P4799 [CEOI 2015] 世界冰球锦标赛 (Day2)
 

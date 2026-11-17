@@ -1,11 +1,14 @@
 ---
 title: "纪念我的第一个紫题"
 published: 2026-11-16
-category: "题解"
+category: ACM竞赛模板
 tags: [学习笔记, C++]
 description: "保留原意整理的学习笔记。"
 draft: false
 ---
+
+[返回分类目录](/posts/acm-index/) · [相关知识点](/posts/acm-keywords/)
+
 
 # P5906 【模板】回滚莫队&不删除莫队
 

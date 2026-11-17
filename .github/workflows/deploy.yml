@@ -23,6 +23,8 @@ jobs:
         with:
           run_install: false
       - run: pnpm install --frozen-lockfile
+      - name: Validate ACM templates and cross-links
+        run: python3 scripts/validate-acm.py
       - run: pnpm content:sync
       - run: pnpm exec astro check
       # Theme authoring docs refer to upstream sample posts, removed from this blog.

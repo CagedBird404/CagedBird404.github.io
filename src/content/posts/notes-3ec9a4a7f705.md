@@ -1,11 +1,14 @@
 ---
 title: "国王游戏"
 published: 2026-11-16
-category: "题解"
+category: ACM竞赛模板
 tags: [学习笔记, C++]
 description: "保留原意整理的学习笔记。"
 draft: false
 ---
+
+[返回分类目录](/posts/acm-index/) · [相关知识点](/posts/acm-keywords/)
+
 
 # P1080 [NOIP 2012 提高组] 国王游戏
 
