@@ -5,7 +5,7 @@ import { withUserConfig } from "../utils/config-overlay.ts";
 export const profileConfig: ProfileConfig = withUserConfig("profile", {
   avatar: "https://avatars.githubusercontent.com/u/357431303?v=4",
   name: "CagedBird404",
-  bio: "记录 C++、计算机网络与操作系统的学习过程。",
+  bio: "外卖员预备役",
   links: [
     {
       name: "GitHub",
