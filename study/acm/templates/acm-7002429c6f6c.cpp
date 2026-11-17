@@ -24,9 +24,9 @@ void solve()
         to.push_back(v);
         wig.push_back(w);
         next.push_back(head[u]);
-        head[u] = cnt++;
+        head[u] = op++;
     }
-    //这里演示怎么便利一个点的邻居
+    //这里演示怎么遍历一个点的邻居
     int q;
     cin >> q;
     while(q--)

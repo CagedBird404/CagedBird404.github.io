@@ -236,7 +236,7 @@
     "title": "初始化列表",
     "topic": "C++基础补充",
     "status": "原有学习实现",
-    "repaired": false,
+    "repaired": true,
     "warning": "",
     "article": "src/content/posts/acm-bbb348798ff5.md",
     "source": "study/acm/templates/acm-bbb348798ff5.cpp"
@@ -269,7 +269,7 @@
     "title": "构造函数的分类及调用",
     "topic": "C++基础补充",
     "status": "原有学习实现",
-    "repaired": false,
+    "repaired": true,
     "warning": "",
     "article": "src/content/posts/acm-b6e0035b7134.md",
     "source": "study/acm/templates/acm-b6e0035b7134.cpp"
@@ -357,7 +357,7 @@
     "title": "4const修饰成员函数",
     "topic": "C++基础补充",
     "status": "原有学习实现",
-    "repaired": false,
+    "repaired": true,
     "warning": "",
     "article": "src/content/posts/acm-abeaba740cbe.md",
     "source": "study/acm/templates/acm-abeaba740cbe.cpp"
@@ -632,7 +632,7 @@
     "title": "二分搜索",
     "topic": "基础算法·搜索与分治",
     "status": "原有学习实现",
-    "repaired": false,
+    "repaired": true,
     "warning": "",
     "article": "src/content/posts/acm-c39b0f67aec5.md",
     "source": "study/acm/templates/acm-c39b0f67aec5.cpp"
@@ -797,7 +797,7 @@
     "title": "STL 算法",
     "topic": "基础算法",
     "status": "原有学习实现",
-    "repaired": false,
+    "repaired": true,
     "warning": "",
     "article": "src/content/posts/acm-a4212b5419fc.md",
     "source": "study/acm/templates/acm-a4212b5419fc.cpp"
@@ -1226,7 +1226,7 @@
     "title": "归并排序",
     "topic": "基础算法",
     "status": "原有学习实现",
-    "repaired": false,
+    "repaired": true,
     "warning": "",
     "article": "src/content/posts/acm-23db3f18f06d.md",
     "source": "study/acm/templates/acm-23db3f18f06d.cpp"
@@ -1589,7 +1589,7 @@
     "title": "树上差分",
     "topic": "数据结构·区间查询",
     "status": "原有学习实现",
-    "repaired": false,
+    "repaired": true,
     "warning": "点差分与边差分的 LCA 标记公式不同，使用前先明确统计对象。",
     "article": "src/content/posts/acm-181d67d85ef4.md",
     "source": "study/acm/templates/acm-181d67d85ef4.cpp"
@@ -1600,7 +1600,7 @@
     "title": "链式前向星",
     "topic": "图论·树上问题",
     "status": "原有学习实现",
-    "repaired": false,
+    "repaired": true,
     "warning": "",
     "article": "src/content/posts/acm-7002429c6f6c.md",
     "source": "study/acm/templates/acm-7002429c6f6c.cpp"
@@ -1831,7 +1831,7 @@
     "title": "简单-阶乘函数",
     "topic": "基础算法·搜索与分治",
     "status": "原有学习实现",
-    "repaired": false,
+    "repaired": true,
     "warning": "",
     "article": "src/content/posts/acm-c5cef7a738d1.md",
     "source": "study/acm/templates/acm-c5cef7a738d1.cpp"
@@ -1842,7 +1842,7 @@
     "title": "经典递归-汉诺塔",
     "topic": "基础算法·搜索与分治",
     "status": "原有学习实现",
-    "repaired": false,
+    "repaired": true,
     "warning": "",
     "article": "src/content/posts/acm-6689057fd0fa.md",
     "source": "study/acm/templates/acm-6689057fd0fa.cpp"

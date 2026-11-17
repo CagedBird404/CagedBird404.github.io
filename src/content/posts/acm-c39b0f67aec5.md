@@ -2,7 +2,7 @@
 title: "二分搜索"
 published: 2026-11-16
 category: ACM竞赛模板
-tags: ["基础算法·搜索与分治","学习实现"]
+tags: ["已修订","基础算法·搜索与分治","学习实现"]
 description: "二分搜索的学习实现与使用笔记。"
 pinned: false
 ---
@@ -22,37 +22,17 @@ pinned: false
 ## 代码
 
 ```cpp
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
-int main(){
-    int num;
-    cin>> num;
-    vector<int> arr(100);
-    for(int i=0;i<100;i++)
-    {
-        cin>> arr[i];
+int binarySearch(const vector<long long>& a, long long x) {
+    int l = 0, r = (int)a.size();
+    while (l < r) {
+        int mid = l + (r-l)/2;
+        if (a[mid] < x) l = mid+1; else r = mid;
     }
-    int l=0;
-    r=arr.size()-1;
-    m=0;
-    while(l<=r)
-    {
-        m=(l+r)/2;
-        if(arr[m]==num)
-        {
-            cout<< "true"<<endl;
-            break;
-        }
-        else if(arr[m]<num)
-        {
-            l=m+1;
-        }
-        else
-        {
-            r=m-1;
-        }
-    }
+    return l < (int)a.size() && a[l] == x ? l : -1;
 }
+// O(log n) 时间，O(1) 额外空间。
 ```
 
 ## 相关知识点
@@ -66,6 +46,8 @@ int main(){
 - [bfs 多源找最近最大值](/posts/acm-addc6cc81933/)
 
 ## 整理记录
+
+**本次修正：** 补全二分搜索；要求数组升序，返回第一次出现的 0 基下标，找不到返回 −1。
 
 保留原实现和主要注释，统一输入流初始化及文章排版；语法检查与算法正确性验证分开记录。
 

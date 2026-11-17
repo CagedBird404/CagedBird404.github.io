@@ -14,14 +14,14 @@ using namespace std;
 class Person
 {
 public:
-    //this指针本质是指针常量，指针的指向是不可以修改的 相当于 Person const * this;
-    void showPerson() const // 相当于 const Person const * this;
+    //this指针本质是指针常量，指针的指向是不可以修改的 可理解为 Person* const（this 不能被重新赋值）。
+    void showPerson() const // 通过 this 访问对象时，对象被视为 const；mutable 成员除外。
     {
         //this -> a = 100;
         this -> b = 100;
     }
-    int a;
-    mutable int b; //加上mutable后即使加上const也可以修改
+    int a = 0;
+    mutable int b = 0; //加上mutable后即使加上const也可以修改
 };
 
 int main()

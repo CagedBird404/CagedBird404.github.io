@@ -2,7 +2,7 @@
 title: "4const修饰成员函数"
 published: 2026-11-16
 category: ACM竞赛模板
-tags: ["C++基础补充","学习实现"]
+tags: ["已修订","C++基础补充","学习实现"]
 description: "常函数：\r      成员函数加const后我们称这个函数为常函数\r"
 pinned: false
 ---
@@ -46,14 +46,14 @@ using namespace std;
 class Person
 {
 public:
-    //this指针本质是指针常量，指针的指向是不可以修改的 相当于 Person const * this;
-    void showPerson() const // 相当于 const Person const * this;
+    //this指针本质是指针常量，指针的指向是不可以修改的 可理解为 Person* const（this 不能被重新赋值）。
+    void showPerson() const // 通过 this 访问对象时，对象被视为 const；mutable 成员除外。
     {
         //this -> a = 100;
         this -> b = 100;
     }
-    int a;
-    mutable int b; //加上mutable后即使加上const也可以修改
+    int a = 0;
+    mutable int b = 0; //加上mutable后即使加上const也可以修改
 };
 
 int main()
@@ -76,6 +76,8 @@ int main()
 - [01背包问题](/posts/acm-b56927a13e82/)
 
 ## 整理记录
+
+**本次修正：** 初始化常对象的成员；纠正 const 成员函数中 this 的目标类型说明。
 
 保留原实现和主要注释，统一输入流初始化及文章排版；语法检查与算法正确性验证分开记录。
 

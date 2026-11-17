@@ -2,7 +2,7 @@
 title: "初始化列表"
 published: 2026-11-16
 category: ACM竞赛模板
-tags: ["C++基础补充","学习实现"]
+tags: ["已修订","C++基础补充","学习实现"]
 description: "列表法：作用为初始化属性\r 语法：构造函数():属性1(值1),属性2(值2)"
 pinned: false
 ---
@@ -38,15 +38,7 @@ public:
     int a;
     int b;
     int c;
-    //传统初始化操作
-    Person(int aa,int bb,int cc)
-    {
-        a = aa;
-        b = bb;
-        c = cc;
-    }
-
-    //初始化列表
+    // 初始化列表
     Person(int aa,int bb,int cc):a(aa),b(bb),c(cc)
     {
 
@@ -68,6 +60,8 @@ int main()
 - [01背包问题](/posts/acm-b56927a13e82/)
 
 ## 整理记录
+
+**本次修正：** 删除重复签名构造函数，只保留初始化列表版本。
 
 保留原实现和主要注释，统一输入流初始化及文章排版；语法检查与算法正确性验证分开记录。
 

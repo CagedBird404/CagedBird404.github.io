@@ -28,6 +28,7 @@ if any(x['repaired'] and not x['syntax_passed'] for x in report):
 
 # Tests below run only the explicitly reviewed reusable functions.
 test_paths=['算法/dp/01背包问题.cpp','算法/dp/完全背包问题.cpp','算法/dp/分组背包问题.cpp','算法/dp/最长公共子序列.cpp','算法/dp/最长上升子序列.cpp','算法/dp/数位dp.cpp','算法/dp/状压dp.cpp','算法/dp/有依赖的背包.cpp','算法/dp/期望dp.cpp','算法/分解质因数.cpp','算法/快速幂/快速幂.cpp','算法/快速幂/矩阵快速幂.cpp','算法/数论/03二元一次方程.cpp','算法/数论/组合数问题/大数组合数.cpp','算法/Tarjan.cpp','算法/最短路径/多源/Johnson.cpp','算法/ST表.cpp','算法/字符串/后缀自动机.cpp','算法/字符串/KMp算法字符串.cpp','算法/数论/素数/费马小定理判断素数.cpp','算法/数论/欧拉函数.cpp','算法/数论/欧拉降幂.cpp']
+test_paths += ['算法/dfs深度优先搜索/二分搜索.cpp', '算法/排序/归并排序.cpp', '算法/树/树上差分.cpp', '算法/递归/简单-阶乘函数.cpp']
 lookup={x['path']:x for x in catalog}
 code='#include <bits/stdc++.h>\nusing namespace std;\n'
 for i,p in enumerate(test_paths):
@@ -92,6 +93,13 @@ int main() {
     assert(!t19::millerRabin(561));assert(t19::millerRabin(18446744073709551557ULL));
     assert(t20::phi(1)==1&&t20::phi(12)==4);
     for(int m=2;m<50;++m)for(int a=1;a<m;++a)if(gcd(a,m)==1)for(int e=0;e<15;++e)assert(t21::eulerPower(a,to_string(e),m)==t10::modPow(a,e,m));
+    assert(t22::binarySearch({1,2,2,5},2)==1);
+    assert(t22::binarySearch({},2)==-1);
+    vector<long long> sortable{3,-1,3,0}; t23::mergeSort(sortable);
+    assert((sortable==vector<long long>{-1,0,3,3}));
+    auto cover=t24::pathCounts({{},{2},{1,3},{2}},{{1,3},{2,3}});
+    assert((cover==vector<long long>{0,1,2,2}));
+    assert(t25::factorial(0)==1 && t25::factorial(20)==2432902008176640000LL);
     cout<<"ACM regression tests passed: knapsack, LIS/LCS, digit DP, graph, number theory, strings.\n";
 }
 '''

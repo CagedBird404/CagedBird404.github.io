@@ -18,6 +18,7 @@ int main(){
     //lower_bound()寻找大于等于X的第一个元素位置,是位置不是数字
     //upper_bound()寻找大于X的第一个元素位置
     vector<int> A{2,5,9,3,0,2,9,4,2,6,7,8};
+    sort(A.begin(), A.end()); // 二分前必须有序。
     int B=lower_bound(A.begin(),A.end(),8)-A.begin();//将迭代器转为数字
     cout<<B<<endl;//如果想从某个位置开始，就在begain后加减，end同理，如果找不到，则返回尾迭代器
     
@@ -49,7 +50,8 @@ int main(){
         cout<<i<<endl;
     }
 
-while(next_permutation(all(a))){}//会将容器内的元素调整为下一个字典序更大的排列，
+vector<int> permutation{1,2,3};
+while(next_permutation(permutation.begin(), permutation.end())){}//会将容器内的元素调整为下一个字典序更大的排列，
                                  //同时也能作为判断标准，没有就返回0，否则为1
                                  //1 2 3 ->  1 3 2  ->  2 1 3  ->  2 3 1  ->  3 1 2等等
     

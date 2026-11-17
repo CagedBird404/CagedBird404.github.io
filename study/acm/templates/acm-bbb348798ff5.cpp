@@ -11,15 +11,7 @@ public:
     int a;
     int b;
     int c;
-    //传统初始化操作
-    Person(int aa,int bb,int cc)
-    {
-        a = aa;
-        b = bb;
-        c = cc;
-    }
-
-    //初始化列表
+    // 初始化列表
     Person(int aa,int bb,int cc):a(aa),b(bb),c(cc)
     {
 

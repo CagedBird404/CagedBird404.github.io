@@ -1,31 +1,11 @@
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
-int main(){
-    int num;
-    cin>> num;
-    vector<int> arr(100);
-    for(int i=0;i<100;i++)
-    {
-        cin>> arr[i];
+int binarySearch(const vector<long long>& a, long long x) {
+    int l = 0, r = (int)a.size();
+    while (l < r) {
+        int mid = l + (r-l)/2;
+        if (a[mid] < x) l = mid+1; else r = mid;
     }
-    int l=0;
-    r=arr.size()-1;
-    m=0;
-    while(l<=r)
-    {
-        m=(l+r)/2;
-        if(arr[m]==num)
-        {
-            cout<< "true"<<endl;
-            break;
-        }
-        else if(arr[m]<num)
-        {
-            l=m+1;
-        }
-        else
-        {
-            r=m-1;
-        }
-    }
+    return l < (int)a.size() && a[l] == x ? l : -1;
 }
+// O(log n) 时间，O(1) 额外空间。
