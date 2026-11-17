@@ -2,7 +2,7 @@
 title: "1普通莫队概率类"
 published: 2026-11-16
 category: ACM竞赛模板
-tags: ["数据结构·离线算法","学习实现"]
+tags: ["数据结构·离线算法"]
 description: "在l到r的范围内，选两个数字，相同的概率是多少，要化简到最小"
 pinned: false
 ---
@@ -15,11 +15,11 @@ pinned: false
 
 ## 使用说明
 
-这是原有学习代码的整理版。先查看下方代码中的输入输出和变量约定；题目专用实现不自动等同于通用模板。
+这里记录我的实现和理解。使用时，我会先确认输入输出、下标和数据范围，再按具体题目调整。
 
 在l到r的范围内，选两个数字，相同的概率是多少，要化简到最小
 
-> 原代码保留了 `#define int long long` 的写法；它会替换所有后续 int，可能改变接口与内存占用。独立复用时更建议用 `using i64 = long long` 并显式选择类型。
+> 我在这份代码里用了 `#define int long long`。使用时要留意它对接口和内存的影响；也可以改用 `using i64 = long long`，显式选择需要的整数类型。
 
 <!-- ACM_VALIDATION -->
 
@@ -150,8 +150,3 @@ signed main()
 - [3只增回滚莫队](/posts/acm-cd676791c6e8/)
 - [离散化天际线](/posts/acm-eed522332a27/)
 
-## 整理记录
-
-保留原实现和主要注释，统一输入流初始化及文章排版；语法检查与算法正确性验证分开记录。
-
-[查看原始源码](https://github.com/CagedBird404/CagedBird404.github.io/blob/main/study/acm/original/acm-8ac8fa4d3177.cpp)

@@ -2,7 +2,7 @@
 title: "欧拉降幂"
 published: 2026-11-16
 category: ACM竞赛模板
-tags: ["数学与数论","已修订"]
+tags: ["数学与数论"]
 description: "当底数与模数互质时，用欧拉函数压缩十进制大指数。"
 pinned: false
 ---
@@ -62,8 +62,3 @@ i64 eulerPower(i64 a, const string& exponent, i64 mod) {
 - [02拓展欧几里得算法](/posts/acm-0df06f54651e/)
 - [求逆](/posts/acm-efd4aac231ba/)
 
-## 整理记录
-
-本次对代码进行了修订或补全：严格要求 gcd(a,m)=1；不互质时不能直接取模指数，需广义欧拉定理或逐位模幂。mod 限于 1..10^9，指数是非负十进制字符串。
-
-[查看原始源码](https://github.com/CagedBird404/CagedBird404.github.io/blob/main/study/acm/original/acm-e7ceeddced74.cpp)

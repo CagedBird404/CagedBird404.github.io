@@ -2,8 +2,8 @@
 title: "有依赖的背包"
 published: 2026-11-16
 category: ACM竞赛模板
-tags: ["动态规划","已修订"]
-description: "补全树形依赖背包：选子物品必须选父物品。"
+tags: ["动态规划"]
+description: "这份模板处理树形依赖背包：选子物品必须选父物品。"
 pinned: false
 ---
 
@@ -11,11 +11,11 @@ pinned: false
 
 ## 用途与思路
 
-补全树形依赖背包：选子物品必须选父物品。
+这份模板处理树形依赖背包：选子物品必须选父物品。
 
 ## 使用前提与复杂度
 
-原文件没有明确完整输入协议，这里改为函数接口；物品 1..n，0 是虚根，parent[i]=0 表示无父依赖，父关系必须为森林。
+我用函数接口记录这个模型；物品 1..n，0 是虚根，parent[i]=0 表示无父依赖，父关系必须为森林。
 
 **复杂度：** O(nV²) 时间，O(nV) 空间。
 
@@ -64,8 +64,3 @@ i64 dependencyKnapsack(int capacity, const vector<int>& parent,
 - [ST表](/posts/acm-227c4f00c3c6/)
 - [状压dp](/posts/acm-48022e812913/)
 
-## 整理记录
-
-本次对代码进行了修订或补全：原文件没有明确完整输入协议，这里改为函数接口；物品 1..n，0 是虚根，parent[i]=0 表示无父依赖，父关系必须为森林。
-
-[查看原始源码](https://github.com/CagedBird404/CagedBird404.github.io/blob/main/study/acm/original/acm-b91b37bcbab1.cpp)

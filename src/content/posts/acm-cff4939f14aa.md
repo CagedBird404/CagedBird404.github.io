@@ -2,7 +2,7 @@
 title: "二进制小问题"
 published: 2026-11-16
 category: ACM竞赛模板
-tags: ["基础算法","已修订"]
+tags: ["基础算法"]
 description: "从高位到低位读取整数二进制位。"
 pinned: false
 ---
@@ -15,7 +15,7 @@ pinned: false
 
 ## 使用前提与复杂度
 
-不再用有优先级错误的 1 << i <= x；使用无符号类型且 bits∈[0,64]。
+取二进制位时，我直接使用移位和按位与；使用无符号类型且 bits∈[0,64]。
 
 **复杂度：** O(bits) 时间，O(bits) 输出空间。
 
@@ -45,8 +45,3 @@ string binaryDigits(unsigned long long x, int bits) {
 - [二进制暴力组合数组的数](/posts/acm-decba90bda9a/)
 - [离散化天际线](/posts/acm-eed522332a27/)
 
-## 整理记录
-
-本次对代码进行了修订或补全：不再用有优先级错误的 1 << i <= x；使用无符号类型且 bits∈[0,64]。
-
-[查看原始源码](https://github.com/CagedBird404/CagedBird404.github.io/blob/main/study/acm/original/acm-cff4939f14aa.cpp)

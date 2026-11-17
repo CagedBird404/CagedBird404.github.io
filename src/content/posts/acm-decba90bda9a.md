@@ -2,7 +2,7 @@
 title: "二进制暴力组合数组的数"
 published: 2026-11-16
 category: ACM竞赛模板
-tags: ["基础算法","学习实现"]
+tags: ["基础算法"]
 description: "二进制掩码枚举法\r 二进制掩码枚举是一种通过二进制数的位状态来表示 “选取 / 不选取” 的暴力枚举方法，\r"
 pinned: false
 ---
@@ -15,7 +15,7 @@ pinned: false
 
 ## 使用说明
 
-这是原有学习代码的整理版。先查看下方代码中的输入输出和变量约定；题目专用实现不自动等同于通用模板。
+这里记录我的实现和理解。使用时，我会先确认输入输出、下标和数据范围，再按具体题目调整。
 
 二进制掩码枚举法
 二进制掩码枚举是一种通过二进制数的位状态来表示 “选取 / 不选取” 的暴力枚举方法，
@@ -28,7 +28,7 @@ pinned: false
 空间复杂度O(n)
 一般可使用范围为 n <= 20
 
-> 原代码保留了 `#define int long long` 的写法；它会替换所有后续 int，可能改变接口与内存占用。独立复用时更建议用 `using i64 = long long` 并显式选择类型。
+> 我在这份代码里用了 `#define int long long`。使用时要留意它对接口和内存的影响；也可以改用 `using i64 = long long`，显式选择需要的整数类型。
 
 <!-- ACM_VALIDATION -->
 
@@ -131,8 +131,3 @@ signed main()
 - [离散化天际线](/posts/acm-eed522332a27/)
 - [1普通莫队](/posts/acm-ec9347e15883/)
 
-## 整理记录
-
-保留原实现和主要注释，统一输入流初始化及文章排版；语法检查与算法正确性验证分开记录。
-
-[查看原始源码](https://github.com/CagedBird404/CagedBird404.github.io/blob/main/study/acm/original/acm-decba90bda9a.cpp)

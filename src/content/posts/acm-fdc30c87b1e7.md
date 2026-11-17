@@ -2,7 +2,7 @@
 title: "贪吃蛇"
 published: 2026-11-16
 category: ACM竞赛模板
-tags: ["扩展练习","学习实现"]
+tags: ["扩展练习"]
 description: "贪吃蛇的学习实现与使用笔记。"
 pinned: false
 ---
@@ -15,9 +15,9 @@ pinned: false
 
 ## 使用说明
 
-这是原有学习代码的整理版。先查看下方代码中的输入输出和变量约定；题目专用实现不自动等同于通用模板。
+这里记录我的实现和理解。使用时，我会先确认输入输出、下标和数据范围，再按具体题目调整。
 
-> **易错点：** 此例依赖 Windows 控制台；蛇占满棋盘时 GenerateFood 会无限循环，应在生成食物前处理胜利状态。
+> **使用时我会注意：** 此例依赖 Windows 控制台；蛇占满棋盘时 GenerateFood 会无限循环，应在生成食物前处理胜利状态。
 
 <!-- ACM_VALIDATION -->
 
@@ -274,8 +274,3 @@ int main() {
 - [板子简洁版](/posts/acm-32e5ca0175a7/)
 - [01背包问题](/posts/acm-b56927a13e82/)
 
-## 整理记录
-
-保留原实现和主要注释，统一输入流初始化及文章排版；语法检查与算法正确性验证分开记录。
-
-[查看原始源码](https://github.com/CagedBird404/CagedBird404.github.io/blob/main/study/acm/original/acm-fdc30c87b1e7.cpp)

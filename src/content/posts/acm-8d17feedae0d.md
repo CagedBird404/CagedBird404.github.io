@@ -2,7 +2,7 @@
 title: "sg函数"
 published: 2026-11-16
 category: ACM竞赛模板
-tags: ["数学·博弈论","学习实现"]
+tags: ["数学·博弈论"]
 description: "图游戏概念\r 任何局面都认为是图中的点，每一个局面都可以通过一种行动，走向图中的另一个点\r"
 pinned: false
 ---
@@ -15,7 +15,7 @@ pinned: false
 
 ## 使用说明
 
-这是原有学习代码的整理版。先查看下方代码中的输入输出和变量约定；题目专用实现不自动等同于通用模板。
+这里记录我的实现和理解。使用时，我会先确认输入输出、下标和数据范围，再按具体题目调整。
 
 图游戏概念
 任何局面都认为是图中的点，每一个局面都可以通过一种行动，走向图中的另一个点
@@ -27,7 +27,7 @@ pinned: false
 sg定理，如果一个ICG游戏(总)，由若干个独立的ICG子游戏构成，那么：
 sg(总) = sg(分1) ^ sg(分2) ^ sg(分3)......
 
-> 原代码保留了 `#define int long long` 的写法；它会替换所有后续 int，可能改变接口与内存占用。独立复用时更建议用 `using i64 = long long` 并显式选择类型。
+> 我在这份代码里用了 `#define int long long`。使用时要留意它对接口和内存的影响；也可以改用 `using i64 = long long`，显式选择需要的整数类型。
 
 <!-- ACM_VALIDATION -->
 
@@ -117,8 +117,3 @@ signed main()
 - [数位dp](/posts/acm-927f6f82d7ce/)
 - [板子简洁版](/posts/acm-32e5ca0175a7/)
 
-## 整理记录
-
-保留原实现和主要注释，统一输入流初始化及文章排版；语法检查与算法正确性验证分开记录。
-
-[查看原始源码](https://github.com/CagedBird404/CagedBird404.github.io/blob/main/study/acm/original/acm-8d17feedae0d.cpp)

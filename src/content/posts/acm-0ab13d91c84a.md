@@ -2,7 +2,7 @@
 title: "1继承基本语法"
 published: 2026-11-16
 category: ACM竞赛模板
-tags: ["C++基础补充","学习实现"]
+tags: ["C++基础补充"]
 description: "继承好处：减少重复代码\r 语法 ： class 子类: 继承方式 父类\r"
 pinned: false
 ---
@@ -15,7 +15,7 @@ pinned: false
 
 ## 使用说明
 
-这是原有学习代码的整理版。先查看下方代码中的输入输出和变量约定；题目专用实现不自动等同于通用模板。
+这里记录我的实现和理解。使用时，我会先确认输入输出、下标和数据范围，再按具体题目调整。
 
 继承好处：减少重复代码
 语法 ： class 子类: 继承方式 父类
@@ -107,8 +107,3 @@ int main(){
 - [板子简洁版](/posts/acm-32e5ca0175a7/)
 - [01背包问题](/posts/acm-b56927a13e82/)
 
-## 整理记录
-
-保留原实现和主要注释，统一输入流初始化及文章排版；语法检查与算法正确性验证分开记录。
-
-[查看原始源码](https://github.com/CagedBird404/CagedBird404.github.io/blob/main/study/acm/original/acm-0ab13d91c84a.cpp)

@@ -33,6 +33,8 @@ jobs:
       - run: node scripts/check-font-schema.mjs
       - run: pnpm type-check
       - run: pnpm build
+      - name: Check collection homepage and author voice
+        run: python3 scripts/check-home-collection.py
       - uses: actions/upload-pages-artifact@v3
         with:
           path: dist

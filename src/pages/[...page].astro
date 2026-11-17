@@ -8,7 +8,11 @@ import { getSortedPosts } from "../utils/content-utils";
 
 export const getStaticPaths = (async ({ paginate }) => {
 	const allBlogPosts = await getSortedPosts();
-	return paginate(allBlogPosts, { pageSize: postListConfig.pageSize });
+	// Show one collection entry on the home feed; collection articles keep their routes.
+	const homePosts = allBlogPosts.filter(
+		(post) => post.data.category !== "ACM竞赛模板" || post.id === "acm-index",
+	);
+	return paginate(homePosts, { pageSize: postListConfig.pageSize });
 }) satisfies GetStaticPaths;
 // https://github.com/withastro/astro/issues/6507#issuecomment-1489916992
 

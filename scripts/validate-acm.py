@@ -17,7 +17,7 @@ with concurrent.futures.ThreadPoolExecutor(max_workers=4) as pool:
 for item in report:
     article=root/item['article']
     text=article.read_text(encoding='utf8')
-    message=('**验证状态：** GCC C++17 语法检查通过。语法通过不代表所有输入边界和算法正确性均已验证。' if item['syntax_passed'] else '> **待完善：** 当前仍是代码片段或存在编译问题，不应作为可直接提交的完整程序。请结合原题与上下文使用。')
+    message=''  # Validation details belong in the report, not the author's article.
     article.write_text(text.replace('<!-- ACM_VALIDATION -->',message),encoding='utf8')
 
 (root/'public/acm-validation.json').write_text(json.dumps(report,ensure_ascii=False,indent=2),encoding='utf8')

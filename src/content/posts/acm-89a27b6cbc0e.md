@@ -2,7 +2,7 @@
 title: "矩阵快速幂"
 published: 2026-11-16
 category: ACM竞赛模板
-tags: ["数学·快速幂","已修订"]
+tags: ["数学·快速幂"]
 description: "把线性递推表示为矩阵，再对转移矩阵做快速幂。"
 pinned: false
 ---
@@ -59,8 +59,3 @@ Matrix matrixPow(Matrix a, i64 e, i64 mod) {
 - [状压dp](/posts/acm-48022e812913/)
 - [二进制暴力组合数组的数](/posts/acm-decba90bda9a/)
 
-## 整理记录
-
-本次对代码进行了修订或补全：这是模矩阵版本；明确取模语义，指数 0 返回单位矩阵；矩阵必须为同阶方阵。
-
-[查看原始源码](https://github.com/CagedBird404/CagedBird404.github.io/blob/main/study/acm/original/acm-89a27b6cbc0e.cpp)

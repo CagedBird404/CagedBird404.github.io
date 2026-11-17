@@ -2,7 +2,7 @@
 title: "STL list"
 published: 2026-11-16
 category: ACM竞赛模板
-tags: ["STL与常用容器","已修订"]
+tags: ["STL与常用容器"]
 description: "双向链表在已知迭代器处进行插入删除。"
 pinned: false
 ---
@@ -52,8 +52,3 @@ int main() {
 - [STL vector](/posts/acm-e019318b825d/)
 - [板子简洁版](/posts/acm-32e5ca0175a7/)
 
-## 整理记录
-
-本次对代码进行了修订或补全：erase 后该[迭代器](/posts/acm-keywords/#iterator)失效；unique 仅删除相邻重复值。不能把已失效的 it 传给 splice。
-
-[查看原始源码](https://github.com/CagedBird404/CagedBird404.github.io/blob/main/study/acm/original/acm-1af5f99849dc.cpp)

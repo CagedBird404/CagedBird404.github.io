@@ -2,7 +2,7 @@
 title: "分解质因数"
 published: 2026-11-16
 category: ACM竞赛模板
-tags: ["数学与数论","已修订"]
+tags: ["数学与数论"]
 description: "把正整数分解为不同质因子。"
 pinned: false
 ---
@@ -50,8 +50,3 @@ vector<i64> primeFactors(i64 n) {
 - [02拓展欧几里得算法](/posts/acm-0df06f54651e/)
 - [求逆](/posts/acm-efd4aac231ba/)
 
-## 整理记录
-
-本次对代码进行了修订或补全：剩余的大质因子在循环结束后加入，不能放在循环内部；用 d≤n/d 避免 d*d 溢出。
-
-[查看原始源码](https://github.com/CagedBird404/CagedBird404.github.io/blob/main/study/acm/original/acm-b62aede718e4.cpp)

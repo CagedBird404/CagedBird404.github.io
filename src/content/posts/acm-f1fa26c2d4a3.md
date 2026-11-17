@@ -2,7 +2,7 @@
 title: "03二元一次方程"
 published: 2026-11-16
 category: ACM竞赛模板
-tags: ["数学与数论","已修订"]
+tags: ["数学与数论"]
 description: "求 ax+by=c 的一组整数解。"
 pinned: false
 ---
@@ -56,8 +56,3 @@ bool linearEquation(i64 a, i64 b, i64 c, i64& x, i64& y) {
 - [02拓展欧几里得算法](/posts/acm-0df06f54651e/)
 - [求逆](/posts/acm-efd4aac231ba/)
 
-## 整理记录
-
-本次对代码进行了修订或补全：有解当且仅当 gcd(a,b) 整除 c；不是 x 必须为 gcd 的倍数。系数和解限定在 long long 可表示范围。
-
-[查看原始源码](https://github.com/CagedBird404/CagedBird404.github.io/blob/main/study/acm/original/acm-f1fa26c2d4a3.cpp)

@@ -2,8 +2,8 @@
 title: "数位dp"
 published: 2026-11-16
 category: ACM竞赛模板
-tags: ["动态规划","已修订"]
-description: "补全一个具体模型：统计 [0,n] 中不含数字 4 的整数。"
+tags: ["动态规划"]
+description: "我以一个具体模型为例：统计 [0,n] 中不含数字 4 的整数。"
 pinned: false
 ---
 
@@ -11,11 +11,11 @@ pinned: false
 
 ## 用途与思路
 
-补全一个具体模型：统计 [0,n] 中不含数字 4 的整数。
+我以一个具体模型为例：统计 [0,n] 中不含数字 4 的整数。
 
 ## 使用前提与复杂度
 
-数位 DP 没有脱离题意的统一转移；这里明确补成“不含 4”示例，0 计入，n≤10^18。
+数位 DP 没有脱离题意的统一转移；我以“不含 4”为例记录状态转移，0 计入，n≤10^18。
 
 **复杂度：** O(位数 × 10) 时间，O(位数) 记忆化空间。
 
@@ -61,8 +61,3 @@ i64 countRangeWithout4(i64 l, i64 r) {
 - [状压dp](/posts/acm-48022e812913/)
 - [二进制暴力组合数组的数](/posts/acm-decba90bda9a/)
 
-## 整理记录
-
-本次对代码进行了修订或补全：数位 DP 没有脱离题意的统一转移；这里明确补成“不含 4”示例，0 计入，n≤10^18。
-
-[查看原始源码](https://github.com/CagedBird404/CagedBird404.github.io/blob/main/study/acm/original/acm-927f6f82d7ce.cpp)

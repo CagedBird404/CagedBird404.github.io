@@ -2,7 +2,7 @@
 title: "LCA共同祖先问题（倍增）"
 published: 2026-11-16
 category: ACM竞赛模板
-tags: ["图论·树上问题","学习实现"]
+tags: ["图论·树上问题"]
 description: "LCA共同祖先问题（倍增）的学习实现与使用笔记。"
 pinned: false
 ---
@@ -15,9 +15,9 @@ LCA共同祖先问题（[倍增](/posts/acm-keywords/#doubling)）的学习实�
 
 ## 使用说明
 
-这是原有学习代码的整理版。先查看下方代码中的输入输出和变量约定；题目专用实现不自动等同于通用模板。
+这里记录我的实现和理解。使用时，我会先确认输入输出、下标和数据范围，再按具体题目调整。
 
-> 原代码保留了 `#define int long long` 的写法；它会替换所有后续 int，可能改变接口与内存占用。独立复用时更建议用 `using i64 = long long` 并显式选择类型。
+> 我在这份代码里用了 `#define int long long`。使用时要留意它对接口和内存的影响；也可以改用 `using i64 = long long`，显式选择需要的整数类型。
 
 <!-- ACM_VALIDATION -->
 
@@ -123,8 +123,3 @@ signed main()
 - [Tarjan](/posts/acm-18decad757c7/)
 - [树型dp](/posts/acm-cde7944003fd/)
 
-## 整理记录
-
-保留原实现和主要注释，统一输入流初始化及文章排版；语法检查与算法正确性验证分开记录。
-
-[查看原始源码](https://github.com/CagedBird404/CagedBird404.github.io/blob/main/study/acm/original/acm-6355aeace8f7.cpp)

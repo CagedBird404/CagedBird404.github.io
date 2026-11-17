@@ -2,7 +2,7 @@
 title: "哈希前缀字符串双"
 published: 2026-11-16
 category: ACM竞赛模板
-tags: ["字符串","学习实现"]
+tags: ["字符串"]
 description: "这里用于解决两个字符串的公共最长子字符串\r 复杂度O(n+m)log min(n,m)"
 pinned: false
 ---
@@ -15,14 +15,14 @@ pinned: false
 
 ## 使用说明
 
-这是原有学习代码的整理版。先查看下方代码中的输入输出和变量约定；题目专用实现不自动等同于通用模板。
+这里记录我的实现和理解。使用时，我会先确认输入输出、下标和数据范围，再按具体题目调整。
 
 这里用于解决两个字符串的公共最长子字符串
 复杂度O(n+m)log min(n,m)
 
-> **易错点：** 原实现把两个 64 位哈希压成一个 64 位值，会丢失信息。它是概率比较，不能作为绝对相等证明。
+> **使用时我会注意：** 这个实现把两个 64 位哈希压成一个 64 位值，会丢失信息。它是概率比较，不能作为绝对相等证明。
 
-> 原代码保留了 `#define int long long` 的写法；它会替换所有后续 int，可能改变接口与内存占用。独立复用时更建议用 `using i64 = long long` 并显式选择类型。
+> 我在这份代码里用了 `#define int long long`。使用时要留意它对接口和内存的影响；也可以改用 `using i64 = long long`，显式选择需要的整数类型。
 
 <!-- ACM_VALIDATION -->
 
@@ -143,8 +143,3 @@ signed main()
 - [后缀自动机](/posts/acm-17cf51dc4e49/)
 - [最小表示法](/posts/acm-0bd63d098ff8/)
 
-## 整理记录
-
-保留原实现和主要注释，统一输入流初始化及文章排版；语法检查与算法正确性验证分开记录。
-
-[查看原始源码](https://github.com/CagedBird404/CagedBird404.github.io/blob/main/study/acm/original/acm-c3a6c2d6240d.cpp)

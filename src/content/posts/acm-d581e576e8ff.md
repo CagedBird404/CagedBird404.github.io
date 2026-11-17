@@ -2,7 +2,7 @@
 title: "高精度"
 published: 2026-11-16
 category: ACM竞赛模板
-tags: ["数学与数论","已修订"]
+tags: ["数学与数论"]
 description: "用分块数组表示大整数并实现运算。"
 pinned: false
 ---
@@ -15,7 +15,7 @@ pinned: false
 
 ## 使用前提与复杂度
 
-修正负整数参数只按值传递的问题；除数必须非零，long long 最小值转换仍需额外处理。
+处理负数参数时，我用引用同步更新其绝对值；除数必须非零，long long 最小值转换仍需额外处理。
 
 **复杂度：** 复杂度取决于运算与位数；乘法使用 Karatsuba 分治。
 
@@ -350,8 +350,3 @@ struct bigint {
 - [02拓展欧几里得算法](/posts/acm-0df06f54651e/)
 - [求逆](/posts/acm-efd4aac231ba/)
 
-## 整理记录
-
-本次对代码进行了修订或补全：修正负整数参数只按值传递的问题；除数必须非零，long long 最小值转换仍需额外处理。
-
-[查看原始源码](https://github.com/CagedBird404/CagedBird404.github.io/blob/main/study/acm/original/acm-d581e576e8ff.cpp)

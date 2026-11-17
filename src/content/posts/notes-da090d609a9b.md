@@ -10,8 +10,6 @@ draft: false
 [返回分类目录](/posts/acm-index/) · [相关知识点](/posts/acm-keywords/)
 
 
-> 整理修正：修正 getchar() 的括号、include 的 # 及加法恒等式括号。补充：位移的乘除类比限于适当类型、移位范围和无溢出的情况；ASCII 大小写相差 32 不适用于所有字符编码。原“结构体函数”示例仍是待修正草稿，不能直接编译；卡特兰数代码存在整数溢出上限。
-
 # 有关字符
 * getchar() 输入
 * putchar(char) 输出

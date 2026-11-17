@@ -2,7 +2,7 @@
 title: "STL stack"
 published: 2026-11-16
 category: ACM竞赛模板
-tags: ["STL与常用容器","已修订"]
+tags: ["STL与常用容器"]
 description: "栈遵循后进先出，用 top 查看栈顶。"
 pinned: false
 ---
@@ -15,7 +15,7 @@ pinned: false
 
 ## 使用前提与[复杂度](/posts/acm-keywords/#complexity)
 
-pop 不返回元素；需要先 top 再 pop。修正分号与 empty 拼写。
+pop 不返回元素；需要先 top 再 pop。用 empty() 判断栈是否为空。
 
 **[复杂度](/posts/acm-keywords/#complexity)：** push、pop、top 通常 O(1)。
 
@@ -47,8 +47,3 @@ int main() {
 - [STL vector](/posts/acm-e019318b825d/)
 - [板子简洁版](/posts/acm-32e5ca0175a7/)
 
-## 整理记录
-
-本次对代码进行了修订或补全：pop 不返回元素；需要先 top 再 pop。修正分号与 empty 拼写。
-
-[查看原始源码](https://github.com/CagedBird404/CagedBird404.github.io/blob/main/study/acm/original/acm-180ffcf6ad81.cpp)

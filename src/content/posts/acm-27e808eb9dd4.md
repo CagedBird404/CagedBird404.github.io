@@ -2,7 +2,7 @@
 title: "分组背包问题"
 published: 2026-11-16
 category: ACM竞赛模板
-tags: ["动态规划","已修订"]
+tags: ["动态规划"]
 description: "物品按组划分，每组至多选择一件。"
 pinned: false
 ---
@@ -51,8 +51,3 @@ i64 groupedKnapsack(int capacity, const vector<vector<pair<int, i64>>>& groups) 
 - [ST表](/posts/acm-227c4f00c3c6/)
 - [状压dp](/posts/acm-48022e812913/)
 
-## 整理记录
-
-本次对代码进行了修订或补全：用上一组的 dp 转移到 next，不依赖组号连续，也不会重复选同一组。
-
-[查看原始源码](https://github.com/CagedBird404/CagedBird404.github.io/blob/main/study/acm/original/acm-27e808eb9dd4.cpp)

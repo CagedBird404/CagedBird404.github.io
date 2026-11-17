@@ -2,7 +2,7 @@
 title: "大数组合数"
 published: 2026-11-16
 category: ACM竞赛模板
-tags: ["数学与数论","已修订"]
+tags: ["数学与数论"]
 description: "Lucas 定理：把 n、m 按质数 p 进制拆分，再相乘。"
 pinned: false
 ---
@@ -15,7 +15,7 @@ Lucas 定理：把 n、m 按质数 p 进制拆分，再相乘。
 
 ## 使用前提与复杂度
 
-p 必须是质数且足够小以便预处理；原注释“把 n 和 p 拆开”应为“把 n 和 m 拆开”。
+p 必须是质数且足够小以便预处理；我把 n 和 m 按 p 进制拆开来计算。
 
 **复杂度：** 预处理 O(p)，单次 O(log_p n)，空间 O(p)。
 
@@ -70,8 +70,3 @@ struct Lucas {
 - [02拓展欧几里得算法](/posts/acm-0df06f54651e/)
 - [求逆](/posts/acm-efd4aac231ba/)
 
-## 整理记录
-
-本次对代码进行了修订或补全：p 必须是质数且足够小以便预处理；原注释“把 n 和 p 拆开”应为“把 n 和 m 拆开”。
-
-[查看原始源码](https://github.com/CagedBird404/CagedBird404.github.io/blob/main/study/acm/original/acm-51bdf9fde205.cpp)

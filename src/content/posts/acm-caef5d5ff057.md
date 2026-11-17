@@ -2,7 +2,7 @@
 title: "STL map"
 published: 2026-11-16
 category: ACM竞赛模板
-tags: ["STL与常用容器","已修订"]
+tags: ["STL与常用容器"]
 description: "有序键值映射，也可用来统计词频。"
 pinned: false
 ---
@@ -47,8 +47,3 @@ int main() {
 - [STL vector](/posts/acm-e019318b825d/)
 - [板子简洁版](/posts/acm-32e5ca0175a7/)
 
-## 整理记录
-
-本次对代码进行了修订或补全：operator[] 对不存在的键会插入默认值；C++17 使用 find，contains 需要 C++20。
-
-[查看原始源码](https://github.com/CagedBird404/CagedBird404.github.io/blob/main/study/acm/original/acm-caef5d5ff057.cpp)

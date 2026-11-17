@@ -2,7 +2,7 @@
 title: "求逆"
 published: 2026-11-16
 category: ACM竞赛模板
-tags: ["数学与数论","已修订"]
+tags: ["数学与数论"]
 description: "在线性时间内计算 1..n 在质数模数下的逆元。"
 pinned: false
 ---
@@ -47,8 +47,3 @@ vector<i64> inverses(int n, i64 p) {
 - [02拓展欧几里得算法](/posts/acm-0df06f54651e/)
 - [1逆元](/posts/acm-00eb98730042/)
 
-## 整理记录
-
-本次对代码进行了修订或补全：要求 p 为质数且 1≤n<p；必须初始化 inv[1]=1。
-
-[查看原始源码](https://github.com/CagedBird404/CagedBird404.github.io/blob/main/study/acm/original/acm-efd4aac231ba.cpp)

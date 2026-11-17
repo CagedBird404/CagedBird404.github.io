@@ -2,7 +2,7 @@
 title: "Bellman–Ford"
 published: 2026-11-16
 category: ACM竞赛模板
-tags: ["图论·最短路","学习实现"]
+tags: ["图论·最短路"]
 description: "与Dijkstra相比，这个算法唯一好处在于可以计算负权边，还能检测负环\r 时间复杂度O(nm);"
 pinned: false
 ---
@@ -15,12 +15,12 @@ pinned: false
 
 ## 使用说明
 
-这是原有学习代码的整理版。先查看下方代码中的输入输出和变量约定；题目专用实现不自动等同于通用模板。
+这里记录我的实现和理解。使用时，我会先确认输入输出、下标和数据范围，再按具体题目调整。
 
 与[Dijkstra](/posts/acm-keywords/#dijkstra)相比，这个算法唯一好处在于可以计算负权边，还能检测负环
 时间复杂度O(nm);
 
-> 原代码保留了 `#define int long long` 的写法；它会替换所有后续 int，可能改变接口与内存占用。独立复用时更建议用 `using i64 = long long` 并显式选择类型。
+> 我在这份代码里用了 `#define int long long`。使用时要留意它对接口和内存的影响；也可以改用 `using i64 = long long`，显式选择需要的整数类型。
 
 <!-- ACM_VALIDATION -->
 
@@ -109,8 +109,3 @@ signed main()
 - [Dijkstra](/posts/acm-38c0561d770b/)
 - [差分约束](/posts/acm-67eb16b713f6/)
 
-## 整理记录
-
-保留原实现和主要注释，统一输入流初始化及文章排版；语法检查与算法正确性验证分开记录。
-
-[查看原始源码](https://github.com/CagedBird404/CagedBird404.github.io/blob/main/study/acm/original/acm-dce7821d1c99.cpp)

@@ -2,7 +2,7 @@
 title: "后缀自动机"
 published: 2026-11-16
 category: ACM竞赛模板
-tags: ["字符串","已修订"]
+tags: ["字符串"]
 description: "构造后缀自动机，统计字符串不同非空子串个数。"
 pinned: false
 ---
@@ -15,7 +15,7 @@ pinned: false
 
 ## 使用前提与复杂度
 
-原文件其实是随机异或哈希，并非[后缀自动机](/posts/acm-keywords/#sam)；原实现保留在源码归档。本补全适用于小写英文字母。
+原文件其实是随机异或哈希，并非[后缀自动机](/posts/acm-keywords/#sam)；这个实现保留在源码归档。这里处理小写英文字母。
 
 **复杂度：** 固定字母表下 O(n) 时间与空间。
 
@@ -73,8 +73,3 @@ struct SuffixAutomaton {
 - [哈希前缀字符串双](/posts/acm-c3a6c2d6240d/)
 - [最小表示法](/posts/acm-0bd63d098ff8/)
 
-## 整理记录
-
-本次对代码进行了修订或补全：原文件其实是随机异或哈希，并非[后缀自动机](/posts/acm-keywords/#sam)；原实现保留在源码归档。本补全适用于小写英文字母。
-
-[查看原始源码](https://github.com/CagedBird404/CagedBird404.github.io/blob/main/study/acm/original/acm-17cf51dc4e49.cpp)

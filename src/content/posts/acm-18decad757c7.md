@@ -2,7 +2,7 @@
 title: "Tarjan"
 published: 2026-11-16
 category: ACM竞赛模板
-tags: ["图论·连通性","已修订"]
+tags: ["图论·连通性"]
 description: "用 DFS 栈求有向图强连通分量。"
 pinned: false
 ---
@@ -62,8 +62,3 @@ vector<int> stronglyConnectedComponents(const vector<vector<int>>& graph) {
 - [期望dp](/posts/acm-95f75c628fe0/)
 - [2-sat问题](/posts/acm-921f68f2aebd/)
 
-## 整理记录
-
-本次对代码进行了修订或补全：图用 0..n−1 编号。low 与 dfn 含义不同；只对仍在栈中的已访问节点更新 dfn。深链可能导致递归栈溢出。
-
-[查看原始源码](https://github.com/CagedBird404/CagedBird404.github.io/blob/main/study/acm/original/acm-18decad757c7.cpp)

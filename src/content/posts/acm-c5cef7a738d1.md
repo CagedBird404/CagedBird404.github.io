@@ -2,7 +2,7 @@
 title: "简单-阶乘函数"
 published: 2026-11-16
 category: ACM竞赛模板
-tags: ["已修订","基础算法·搜索与分治","学习实现"]
+tags: ["基础算法·搜索与分治"]
 description: "简单-阶乘函数的学习实现与使用笔记。"
 pinned: false
 ---
@@ -15,7 +15,7 @@ pinned: false
 
 ## 使用说明
 
-这是原有学习代码的整理版。先查看下方代码中的输入输出和变量约定；题目专用实现不自动等同于通用模板。
+这里记录我的实现和理解。使用时，我会先确认输入输出、下标和数据范围，再按具体题目调整。
 
 <!-- ACM_VALIDATION -->
 
@@ -42,10 +42,3 @@ long long factorial(int n) {
 - [树型dp](/posts/acm-cde7944003fd/)
 - [bfs 多源找最近最大值](/posts/acm-addc6cc81933/)
 
-## 整理记录
-
-**本次修正：** 修正头文件和 0! 基例；显式限定 long long 的精确范围为 0..20。
-
-保留原实现和主要注释，统一输入流初始化及文章排版；语法检查与算法正确性验证分开记录。
-
-[查看原始源码](https://github.com/CagedBird404/CagedBird404.github.io/blob/main/study/acm/original/acm-c5cef7a738d1.cpp)

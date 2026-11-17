@@ -2,7 +2,7 @@
 title: "欧拉函数"
 published: 2026-11-16
 category: ACM竞赛模板
-tags: ["数学与数论","已修订"]
+tags: ["数学与数论"]
 description: "计算 1..n 中与 n 互质的正整数个数。"
 pinned: false
 ---
@@ -49,8 +49,3 @@ i64 phi(i64 n) {
 - [02拓展欧几里得算法](/posts/acm-0df06f54651e/)
 - [求逆](/posts/acm-efd4aac231ba/)
 
-## 整理记录
-
-本次对代码进行了修订或补全：phi(1)=1；逐个不同质因子执行 ans=ans/p*(p−1)，无需用模逆做普通除法。
-
-[查看原始源码](https://github.com/CagedBird404/CagedBird404.github.io/blob/main/study/acm/original/acm-fe9d3ad89533.cpp)

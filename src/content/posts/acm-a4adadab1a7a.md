@@ -2,7 +2,7 @@
 title: "STL priority（排序优化）"
 published: 2026-11-16
 category: ACM竞赛模板
-tags: ["STL与常用容器","已修订"]
+tags: ["STL与常用容器"]
 description: "优先队列始终提供当前优先级最高的元素。"
 pinned: false
 ---
@@ -52,8 +52,3 @@ int main(){
 - [板子简洁版](/posts/acm-32e5ca0175a7/)
 - [01背包问题](/posts/acm-b56927a13e82/)
 
-## 整理记录
-
-本次对代码进行了修订或补全：堆不是完全排好序的数组，默认大顶堆；greater 对应小顶堆。
-
-[查看原始源码](https://github.com/CagedBird404/CagedBird404.github.io/blob/main/study/acm/original/acm-a4adadab1a7a.cpp)
