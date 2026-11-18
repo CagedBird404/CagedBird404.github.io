@@ -1,26 +1,25 @@
 ---
-title: "TCP 与 UDP"
+title: "4. 传输层"
 published: 2026-11-18
 category: 计算机网络
-description: "我把可靠性、速度和安全性分开理解。"
 ---
 
-[返回计算机网络专题](/posts/network-index/)
+[返回七层总图和分层目录](/posts/network-index/)
 
-我把可靠性、速度和安全性分开理解。
+TCP 给程序提供可靠、有序的字节流。它先建立连接，丢失的数据可以重传。字节流里没有应用消息的边界，所以我会按协议用长度字段或分隔符来判断一条消息什么时候结束。
 
-## TCP
+UDP 按数据报发送。可以用 `sendto()` 直接指定目标，UDP 自身不保证送达、顺序或去重。是否更快要看场景，是否加密要看使用的安全机制。
 
-TCP 先建立连接，随后提供可靠、有序的**字节流**。丢失的数据可以重传。应用要自己划分消息边界，例如用长度字段或换行符，因为一次发送和一次接收的字节数可能不同。
+### 从 Socket 到端口
 
-## UDP
+我把套接字理解为程序通过操作系统收发网络数据的入口。`socket(AF_INET, SOCK_DGRAM, IPPROTO_UDP)` 创建 IPv4 UDP 套接字，此时已经选好协议。系统返回句柄，之后的 `bind()`、`sendto()` 和 `recvfrom()` 都用它指定要操作的套接字。
 
-UDP 按**数据报**传输，可以用 `sendto()` 直接给指定地址发送。协议本身不保证送达、顺序或去重。如果应用需要确认或重试，就要在上层实现。
+服务端可以用 `bind()` 绑定本地 IP 和端口。客户端没提前绑定时，第一次 `sendto()` 通常会让系统自动分配本地临时端口。我把端口想成业务窗口的编号，系统会结合协议、地址和端口，把数据交给对应的套接字。一个进程能持有多个套接字，多个 TCP 连接也可以共用同一个服务端端口。
 
-我选择协议时会先看业务能不能接受丢包、是否要求顺序。实际速度取决于网络和应用实现，加密则由 TLS 等机制提供。
+### 进程和线程
 
-[接着看 Socket、IP 和端口](/posts/network-socket/)
+我把进程理解为程序运行起来的一个实例，它持有内存等资源。线程是在进程里推进工作的执行流程。同一个逻辑 CPU 上，多个线程交替执行叫并发。在不同逻辑 CPU 上同一时刻执行，才叫并行。一个线程可以管理多个套接字，等待网络数据时，系统也可以安排其他线程运行。
 
-## 关键词
-
-[TCP](/posts/network-keywords/#tcp) · [UDP](/posts/network-keywords/#udp) · [Socket](/posts/network-keywords/#socket) · [端口](/posts/network-keywords/#端口)
+- [Socket、IP 和端口](/posts/network-socket/)
+- [走一遍 UDP 的发出、转发和回复](/posts/network-flow/)
+- [TCP](/posts/network-keywords/#tcp) · [UDP](/posts/network-keywords/#udp) · [端口](/posts/network-keywords/#端口)
