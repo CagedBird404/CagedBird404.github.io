@@ -1,15 +1,29 @@
 ---
-title: "3. 网络层"
+title: "IPv4、IPv6 与 ARP"
 published: 2026-11-18
 category: 计算机网络
+description: "我用本机、局域网和跨网三个场景理解地址与转发。"
 ---
 
-[返回七层总图和分层目录](/posts/network-index/)
+[返回计算机网络专题](/posts/network-index/)
 
-我在网络层关注两个问题：这个 IP 包从哪里来，要往哪里去？IP 包里有源地址和目的地址。操作系统按路由表选择出口和下一跳，路由器收到包后也会根据目的 IP 继续转发。
+我用本机、局域网和跨网三个场景理解地址与转发。
 
-在程序里，我可以先指定本机的某个 IP 来绑定套接字，也可以让系统按路由选择发送用的源 IP。对端 IP 则决定包最终要到哪里。IPv4 和 IPv6 可以同时存在，IPv4 的本机回环是 `127.0.0.1`，IPv6 的是 `::1`。
+## IPv4 和 IPv6
 
-跨网络时，当前这一跳要先交给网关。以太网 IPv4 场景下，ARP 查的是网关的 MAC 地址，IP 包的目的地址仍然指向最终目标。
+IPv4 地址有 32 位，例如 `192.168.1.10`。IPv6 地址有 128 位，用十六进制和冒号表示。一个网络接口可以同时拥有两种地址。本机测试可以用 IPv4 的 `127.0.0.1` 或 IPv6 的 `::1`。
 
-相关卡片 · [IPv4](/posts/network-keywords/#ipv4) · [IPv6](/posts/network-keywords/#ipv6) · [ARP](/posts/network-keywords/#arp) · [NDP](/posts/network-keywords/#ndp)
+## ARP 查的是下一跳的 MAC 地址
+
+在以太网里，IP 数据包记录源和目的 IP，当前这一跳还需要知道该把帧交给哪个 MAC 地址。
+
+- 如果目标就在当前链路上，我用 ARP 解析目标的 IPv4 地址。
+- 如果目标在别的网络，我用 ARP 解析下一跳（通常是默认网关）的 IPv4 地址。在这台电脑发出的 IP 包里，目的 IP 仍然是最终目标。
+
+ARP 的结果可以暂存在缓存。IPv6 通过邻居发现（NDP）完成类似的地址解析。
+
+[回到 OSI 七层网络模型](/posts/network-osi/)
+
+## 关键词
+
+[OSI](/posts/network-keywords/#osi) · [IPv4](/posts/network-keywords/#ipv4) · [IPv6](/posts/network-keywords/#ipv6) · [ARP](/posts/network-keywords/#arp) · [NDP](/posts/network-keywords/#ndp)
