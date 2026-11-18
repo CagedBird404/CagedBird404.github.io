@@ -10,7 +10,12 @@ export const getStaticPaths = (async ({ paginate }) => {
 	const allBlogPosts = await getSortedPosts();
 	// Show one collection entry on the home feed; collection articles keep their routes.
 	const homePosts = allBlogPosts.filter(
-		(post) => post.data.category !== "ACM竞赛模板" || post.id === "acm-index",
+		(post) => {
+			const category = post.data.category;
+			if (category === "ACM竞赛模板") return post.id === "acm-index";
+			if (category === "计算机网络") return post.id === "network-index";
+			return true;
+		},
 	);
 	return paginate(homePosts, { pageSize: postListConfig.pageSize });
 }) satisfies GetStaticPaths;
